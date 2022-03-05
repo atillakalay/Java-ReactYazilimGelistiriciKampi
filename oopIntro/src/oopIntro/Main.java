@@ -4,40 +4,41 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		Product product1 = new Product(1, "Lenovo V14", "16GB Ram", 14000, 750);
+		Product product1 = new Product();
+		product1.setId(2);
+		product1.setName("Lenovo V17");
+		product1.setDetail("32GB Ram");
+		product1.setDiscount(12);
+		product1.setUnitPrice(24000);
+		product1.setStockAmount(750);
 
-		Product product2 = new Product(2, "Lenovo V15", "64 GB Ram", 15000, 800);
-		product2.id = 2;
-		product2.name = "Lenovo V15";
-		product2.price = 18000;
-		product2.detail = "64 GB Ram";
+		Product product2 = new Product();
+		product2.setId(2);
+		product2.setName("Lenovo V15");
+		product2.setDetail("16GB Ram");
+		product2.setDiscount(10);
+		product2.setUnitPrice(16000);
+		product2.setStockAmount(750);
 
-		Product product3 = new Product();
-		product3.id = 3;
-		product3.name = "Lenovo V16";
-		product3.price = 15000;
-		product3.detail = "16 GB Ram";
-
-		Product[] products = { product1, product2, product3 };
+		Product[] products = { product1, product2 };
 
 		for (Product product : products) {
-			System.out.println(product.name);
+			System.out.println(
+					"Ürün Adý: " + product.getName() + " Ýndirimli Fiyatý: " + product.getUnitPriceAfterDiscount());
 		}
-
-		System.out.println(products.length);
-
-		Category category1 = new Category();
-		category1.id = 1;
-		category1.name = "Bilgisayar";
-
-		Category category2 = new Category();
-		category2.id = 1;
-		category2.name = "Ev/Bahçe";
 
 		ProductManager productManager = new ProductManager();
 		productManager.addToCart(product1);
 		productManager.addToCart(product2);
-		productManager.addToCart(product3);
+
+		Category category1 = new Category();
+		category1.setId(1);
+		category1.setName("Ýçecek");
+
+		Category category2 = new Category();
+		category2.setId(2);
+		category2.setName("Yiyecek");
+
 	}
 
 }

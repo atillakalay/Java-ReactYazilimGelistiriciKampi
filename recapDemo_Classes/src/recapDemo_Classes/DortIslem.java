@@ -9,11 +9,9 @@ public class DortIslem {
 		return toplam;
 	}
 
-	public int cikar(int... sayilar) {
+	public int cikar(int sayi1, int sayi2) {
 		int sonuc = 0;
-		for (int sayi : sayilar) {
-			sonuc = sayi - sonuc;
-		}
+		sonuc = sayi1 - sayi2;
 		return sonuc;
 	}
 

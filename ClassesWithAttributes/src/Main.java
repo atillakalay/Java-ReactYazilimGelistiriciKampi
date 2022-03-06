@@ -2,7 +2,7 @@
 public class Main {
 
 	public static void main(String[] args) {
-		Product product = new Product(1,"Laptop", "Monster Laptop", 13500, 5, "Siyah");
+		Product product = new Product(1, "Laptop", "Monster Laptop", 13500, 5, "Siyah");
 		product.setName("Laptop");
 		product.setDescription("Monster Laptop");
 		product.setPrice(13000);

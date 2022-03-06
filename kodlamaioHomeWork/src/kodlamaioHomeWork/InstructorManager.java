@@ -1,6 +1,6 @@
 package kodlamaioHomeWork;
 
-public class InstructorManager {
+public class InstructorManager extends UserManager {
 	public void courseAdd() {
 		System.out.println("Kurs eklendi");
 	}

@@ -3,8 +3,12 @@ package kodlamaioHomeWork;
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		StudentManager studentManager = new StudentManager();
+		studentManager.courseList();
 
+		InstructorManager instructorManager = new InstructorManager();
+		instructorManager.courseList();
+		instructorManager.courseAdd();
 	}
 
 }
